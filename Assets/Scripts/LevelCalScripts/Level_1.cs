@@ -22,22 +22,19 @@ public class Level_1 : MonoBehaviour
         num2 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;
         symb = emptyBox2.GetComponent<SymbolIdentifier>().Symbol;
 
-        if (num1 != 'a' && num2 != 'a' && symb != 'a')
+        if (num1 != 'a' && num2 != 'a')
         {
             int a = num1 - '0';
             int b = num2 - '0';
-            if (a + b == 4 && symb == '+')
+            if (a + b == 10)
             {
                 Debug.Log("Winner");
             }
             else
             {
-                Debug.Log("loser");
+                Debug.Log(a+b);
             }
         }
-        else
-        {
-            Debug.Log("loser");
-        }
+        
     }
 }
