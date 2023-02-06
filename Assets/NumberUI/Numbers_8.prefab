@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -1597196452040573768}
   - component: {fileID: -1701638441210251743}
   - component: {fileID: -6206720876690297756}
+  - component: {fileID: 7448779643748151180}
   m_Layer: 0
   m_Name: Numbers_8
   m_TagString: Untagged
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragging: 0
+  LastPosition: {x: 0, y: 0, z: 0}
 --- !u!61 &-1701638441210251743
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +149,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7448779643748151180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137693655095118329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ca973afeef8c14ba2c553319964185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Number: 56
