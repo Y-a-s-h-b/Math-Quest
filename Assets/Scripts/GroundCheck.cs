@@ -28,7 +28,7 @@ public class GroundCheck : MonoBehaviour
     {
         if (checkingGround)
         {
-            transform.localPosition = new Vector3(transform.localPosition.x, 1, 0);
+            transform.localPosition = new Vector3(transform.localPosition.x,1, 0);
             transform.localRotation = Quaternion.Euler(0,0,0);
 
         }
