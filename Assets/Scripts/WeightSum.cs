@@ -6,8 +6,7 @@ using UnityEngine;
 public class WeightSum : MonoBehaviour
 {
     public GameObject slot1;
-    public GameObject slot2;
-    public GameObject posiGameObj;
+    public GameObject slot2;    
     public float massMultiplier;
     private int weight1;
     private int weight2;
