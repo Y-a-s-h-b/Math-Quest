@@ -11,7 +11,8 @@ public class SeeSawModifier : MonoBehaviour
     private float weightRight;
     private Transform currTrans;
     public float comeBackSpeed;
-    private bool posiFiexer = false;
+    private bool posiFiexer = true;
+    private float timeCount = 0.0f;
     
 
 
@@ -29,7 +30,13 @@ public class SeeSawModifier : MonoBehaviour
 
         if (weightLeft==weightRight && weightLeft>1) 
         {
-            setRotation();            
+            transform.rotation = Quaternion.Lerp(currTrans.rotation, new Quaternion(0f, 0f, 0f, 1), timeCount * comeBackSpeed);
+            timeCount = timeCount + Time.deltaTime;
+            if (posiFiexer)
+            {
+                this.GetComponent<BoxCollider2D>().enabled = false;
+                posiFiexer = false;
+            }
         }
 
         
@@ -37,8 +44,13 @@ public class SeeSawModifier : MonoBehaviour
 
     void setRotation()
     {        
-        transform.rotation = Quaternion.Lerp(currTrans.rotation,new Quaternion(0f,0f,0f,1), Time.deltaTime * comeBackSpeed);
-        this.GetComponent<BoxCollider2D>().enabled = false;
+        transform.rotation = Quaternion.Lerp(currTrans.rotation,new Quaternion(0f,0f,0f,1), timeCount * comeBackSpeed);
+        timeCount = timeCount + Time.deltaTime;
+        if (posiFiexer)
+        {
+            this.GetComponent<BoxCollider2D>().enabled = false;
+            posiFiexer = false;
+        }
     }
 
 
