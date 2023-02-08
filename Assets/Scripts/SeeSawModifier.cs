@@ -13,22 +13,25 @@ public class SeeSawModifier : MonoBehaviour
     public float comeBackSpeed;
     private bool posiFiexer = true;
     private float timeCount = 0.0f;
-    
+    private float massMultiplier;
+    public WeightSum weightScript;
 
 
     void Start()
     {
-       
+        massMultiplier = weightScript.massMultiplier;
+        Debug.Log("mass multi"+ massMultiplier);
     }
 
     private void Update()
     {
+
         weightLeft = leftside.mass;
         weightRight = rightside.mass;
         currTrans = this.transform;
         Debug.Log(weightLeft);
 
-        if (weightLeft==weightRight && weightLeft>1) 
+        if (weightLeft == weightRight && weightLeft > massMultiplier)
         {
             transform.rotation = Quaternion.Lerp(currTrans.rotation, new Quaternion(0f, 0f, 0f, 1), timeCount * comeBackSpeed);
             timeCount = timeCount + Time.deltaTime;
@@ -39,7 +42,6 @@ public class SeeSawModifier : MonoBehaviour
             }
         }
 
-        
     }
 
     void setRotation()
@@ -53,5 +55,5 @@ public class SeeSawModifier : MonoBehaviour
         }
     }
 
-
+   
 }
