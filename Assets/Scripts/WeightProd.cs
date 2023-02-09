@@ -30,9 +30,11 @@ public class WeightProd : MonoBehaviour
     {
         weight1 = slot1.GetComponent<WeightIdentifierProd>().weight;
         weight2 = slot2.GetComponent<WeightIdentifierProd>().weight;
-       
+        Debug.Log("Weigh1");
+        Debug.Log(weight1);
+        Debug.Log(weight2);
         int knew = weight1 * weight2;
-       
+        Debug.Log(knew);
         
                 
         rb.mass = ((knew) * massMultiplier)+1 ;
