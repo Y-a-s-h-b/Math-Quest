@@ -20,7 +20,12 @@ public class WeightSum : MonoBehaviour
         rb.mass = 1f;
     }
 
-    
+    private void Update()
+    {
+
+        //this.transform.position = posiGameObj.transform.position;
+        
+    }
 
     public void changeWeight()
     {
