@@ -21,8 +21,6 @@ public class Level_1 : MonoBehaviour
         num1 = emptyBox1.GetComponent<SymbolIdentifier>().Symbol;
         num2 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;
 
-        Debug.Log(num1);
-        Debug.Log(num2);
 
         if (num1 != 'k' && num2 != 'k')
         {
@@ -32,10 +30,7 @@ public class Level_1 : MonoBehaviour
             {
                 Debug.Log("Winner");
             }
-            else
-            {
-                Debug.Log(a + b);
-            }
+           
         }
 
     }

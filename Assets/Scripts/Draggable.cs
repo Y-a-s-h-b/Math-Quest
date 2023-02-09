@@ -38,11 +38,12 @@ public class Draggable : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, movementDestination.Value, movementTime * Time.fixedDeltaTime);
             }
         }
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("innnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn");
+        
         Draggable collidedDraggable = other.GetComponent<Draggable>();
 
         if (collidedDraggable != null && dragController.LastDragged.gameObject == gameObject)
@@ -56,6 +57,7 @@ public class Draggable : MonoBehaviour
         {
             movementDestination = other.transform.position;
         }
+               
     }
 
 }

@@ -19,19 +19,11 @@ public class WeightCalLeft : MonoBehaviour
         rb.mass = 1f;
     }
 
-    private void Update()
-    {
-
-        //this.transform.position = posiGameObj.transform.position;
-
-    }
-
     public void changeWeight()
     {
         symb = slot1.GetComponent<SymbolIdentifier>().Symbol;
         weight2 = slot2.GetComponent<WeightIdentifierLvl10>().weight;
-        Debug.Log("Weigh1");        
-        Debug.Log(weight2);
+        
         int knew = 0;
         if (weight2>0 && weight2<10 && symb!='k')
         {
@@ -52,12 +44,9 @@ public class WeightCalLeft : MonoBehaviour
             {
                 knew = 0;
             }
-        }
+        }           
         
         
-        
-
-
         rb.mass = ((knew) * massMultiplier) + 1;
         rb.simulated = false;
         rb.simulated = true;

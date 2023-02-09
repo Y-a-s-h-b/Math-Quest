@@ -29,10 +29,7 @@ public class WeightCalRight : MonoBehaviour
         weight1 = slot1.GetComponent<WeightIdentifierLvl10R>().weight;
         weight2 = slot2.GetComponent<WeightIdentifierLvl10R>().weight;
         symb = slot3.GetComponent<SymbolIdentifier>().Symbol;
-        Debug.Log("Weigh1");
-        
-        Debug.Log(symb);
-
+       
         int knew = 0;
         if ((weight2 > 0 && weight2 < 10) && (weight1 > 0 && weight1 < 10) && symb !='k')
         {
@@ -58,11 +55,8 @@ public class WeightCalRight : MonoBehaviour
         else
         {
             knew = 0;
-        } 
-        
-
-        
-
+        }     
+          
 
         rb.mass = ((knew) * massMultiplier) + 1;
         rb.simulated = false;

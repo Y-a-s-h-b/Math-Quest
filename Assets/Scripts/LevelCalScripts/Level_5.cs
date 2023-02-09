@@ -30,12 +30,7 @@ public class Level_5 : MonoBehaviour
             {
                 Debug.Log("Winner");
             }
-            else
-            {
-                Debug.Log(a);
-                Debug.Log(symb);
-            }
-
+            
         }
 
     }
