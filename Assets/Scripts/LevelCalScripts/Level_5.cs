@@ -5,8 +5,9 @@ using UnityEngine;
 public class Level_5 : MonoBehaviour
 {
     private char num1 = 'a';    
-    public GameObject emptyBox1;
-    // public GameObject emptyBox3;
+    public GameObject signEmptyBox;
+    public GameObject emptyBox3;
+    private char symb = 'a';
     private void Update()
     {
         checker();
@@ -14,15 +15,25 @@ public class Level_5 : MonoBehaviour
 
     void checker()
     {
-        num1 = emptyBox1.GetComponent<SymbolIdentifier>().Symbol;        
+        num1 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;
+        symb = signEmptyBox.GetComponent<SymbolIdentifier>().Symbol;
 
-        if (num1 != 'a')
+        if (num1 != 'k' && symb!='k')
         {
             int a = num1 - '0';
             
-            if (a == 8)
+            if (symb=='x' && a==8)
             {
                 Debug.Log("Winner");
+            }
+            else if (symb=='+' && a==6 )
+            {
+                Debug.Log("Winner");
+            }
+            else
+            {
+                Debug.Log(a);
+                Debug.Log(symb);
             }
 
         }

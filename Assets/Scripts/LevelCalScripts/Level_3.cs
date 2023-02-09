@@ -21,7 +21,7 @@ public class Level_3 : MonoBehaviour
         num2 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;
         symb = emptyBox2.GetComponent<SymbolIdentifier>().Symbol;
 
-        if (num1 != 'a' && num2 != 'a')
+        if (num1 != 'k' && num2 != 'k')
         {
             int a = num1 - '0';
             int b = num2 - '0';

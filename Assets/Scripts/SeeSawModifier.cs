@@ -20,7 +20,7 @@ public class SeeSawModifier : MonoBehaviour
     void Start()
     {
         massMultiplier = weightScript.massMultiplier;
-        Debug.Log("mass multi"+ massMultiplier);
+        
     }
 
     private void Update()
@@ -29,9 +29,9 @@ public class SeeSawModifier : MonoBehaviour
         weightLeft = leftside.mass;
         weightRight = rightside.mass;
         currTrans = this.transform;
-        Debug.Log(weightLeft);
+        
 
-        if (weightLeft == weightRight && weightLeft > massMultiplier)
+        if (weightLeft == weightRight && weightLeft >massMultiplier)
         {
             transform.rotation = Quaternion.Lerp(currTrans.rotation, new Quaternion(0f, 0f, 0f, 1), timeCount * comeBackSpeed);
             timeCount = timeCount + Time.deltaTime;
