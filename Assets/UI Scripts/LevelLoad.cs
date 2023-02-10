@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.TextCore.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,10 +11,12 @@ public class LevelLoad : MonoBehaviour
     public Animator transition;
     [SerializeField] private float waitTime = 2f;
     public static int intSaver = 0;
+    private bool intchanger = true;
     // Start is called before the first frame update
     
     void Update()
     {
+        Debug.Log(intSaver);
         dialogueManager = dial.GetComponent<DialogueManager>();
         if (dialogueManager.nextScene == true)
         {
@@ -24,10 +27,13 @@ public class LevelLoad : MonoBehaviour
 
     public void LoadNext()
     {
-
-        intSaver++;
+        if (intchanger)
+        {
+            intSaver += 1;
+            intchanger = false;
+        }
+        
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-
 
     }
 

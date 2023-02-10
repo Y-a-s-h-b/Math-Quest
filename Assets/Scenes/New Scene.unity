@@ -932,7 +932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 404906, guid: b6ed95875921a1f4f9c6f17b9f812b11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.61
+      value: 4.98
       objectReference: {fileID: 0}
     - target: {fileID: 404906, guid: b6ed95875921a1f4f9c6f17b9f812b11, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1235,6 +1235,9 @@ MonoBehaviour:
   speed: 2
   joystick: {fileID: 2107233145}
   joy: {fileID: 567899707}
+  Witch1Trns: {fileID: 311683680}
+  Witch2Trns: {fileID: 201278759}
+  Witch3Trns: {fileID: 1633880232}
 --- !u!61 &932125991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2109,7 +2112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481901203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.163557, y: -0.7900001, z: -10}
+  m_LocalPosition: {x: 11.518578, y: -0.7900001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2412,7 +2415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727150391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.163557, y: -0.7900001, z: -10}
+  m_LocalPosition: {x: 11.518578, y: -0.7900001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

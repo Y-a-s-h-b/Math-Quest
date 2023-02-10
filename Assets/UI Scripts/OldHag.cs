@@ -14,6 +14,10 @@ public class OldHag : MonoBehaviour
         dialogueTrigger = GetComponent<DialogueTrigger>();
         uiObject.SetActive(false);
         anim= GetComponent<Animator>();
+        if (LevelLoad.intSaver==1)
+        {
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
     }
     void OnTriggerEnter2D(Collider2D Collider)
     {

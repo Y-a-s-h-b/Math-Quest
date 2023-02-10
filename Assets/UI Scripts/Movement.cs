@@ -14,6 +14,9 @@ public class Movement : MonoBehaviour
     private float movX;
     private StandaloneInputModule inputModule;
     public GameObject joy;
+    public Transform Witch1Trns;
+    public Transform Witch2Trns;
+    public Transform Witch3Trns;
     
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,19 @@ public class Movement : MonoBehaviour
         anim= GetComponent<Animator>();
         inputModule = GetComponent<StandaloneInputModule>();
         anim.enabled = true;
+        if (LevelLoad.intSaver == 1)
+        {
+            this.transform.position = Witch1Trns.position;
+        }
+        else if (LevelLoad.intSaver ==2)
+        {
+            this.transform.position = Witch2Trns.position;
+        }
+        else if (LevelLoad.intSaver ==3)
+        {
+            this.transform.position = Witch3Trns.position;
+        }
+        
     }
 
     // Update is called once per frame
