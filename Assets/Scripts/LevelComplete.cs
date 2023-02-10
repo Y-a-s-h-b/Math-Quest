@@ -57,13 +57,17 @@ public class LevelComplete : MonoBehaviour
         {
             levelsFade.LoadNext();
         }
-        if (i!=2 && i!=5)
+        if (i!=2 && i!=5 && i!=9)
         {
             levels[i + 1].SetActive(true);           
             
+        }        
+        if (i == 9)
+        {
+            levelsFade.LoadNext();
         }
         i += 1;
-        if (i == 9)
+        if (i>9)
         {
             Destroy(this);
         }
@@ -83,7 +87,7 @@ public class LevelComplete : MonoBehaviour
     }
     public void Newbutton()
     {
-        if (i!=2 && i!=5)
+        if (i!=2 && i!=5 && i!=9)
         {
             WindowChanger.GetComponent<Animator>().Play("LevelChange");
             StartCoroutine(LevelChangeDelay());
