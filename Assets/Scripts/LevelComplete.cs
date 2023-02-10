@@ -15,11 +15,14 @@ public class LevelComplete : MonoBehaviour
     public AudioSource LevelCompletion;
     public GameObject Fade;
     private LevelsFade levelsFade;
+    public GameObject nextButton;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {   
         levelsFade = Fade.GetComponent<LevelsFade>();
-        won = false;                
+        won = false;       
+        anim = GetComponent<Animator>();
                         
     }
 
@@ -35,6 +38,7 @@ public class LevelComplete : MonoBehaviour
 
     public void levelWon()
     {
+        nextButton.SetActive(true);
         won = true;
         Debug.Log("Winner");
         StartCoroutine(levelDelay());
@@ -85,6 +89,10 @@ public class LevelComplete : MonoBehaviour
     IEnumerator simpleDelay()
     {
         yield return new WaitForSeconds(4f);
+    }
+    public void Newbutton()
+    {
+        anim.Play("Temp");
     }
         
 }
