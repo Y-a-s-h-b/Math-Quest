@@ -17,6 +17,7 @@ public class OldHag : MonoBehaviour
         if (LevelLoad.intSaver==1)
         {
             GetComponent<BoxCollider2D>().enabled = false;
+            anim.SetTrigger("destroy");
         }
     }
     void OnTriggerEnter2D(Collider2D Collider)
