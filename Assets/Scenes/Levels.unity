@@ -1538,7 +1538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150237962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75283813, z: -10}
+  m_LocalPosition: {x: 0, y: 0.75283813, z: -13.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4233,7 +4233,7 @@ GameObject:
   - component: {fileID: 468372823}
   - component: {fileID: 468372822}
   - component: {fileID: 468372821}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Celebration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9085,7 +9085,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468372820}
   m_LocalRotation: {x: -0.56472063, y: 0.4255475, z: -0.4255475, w: 0.56472063}
-  m_LocalPosition: {x: -16.072407, y: 9.167431, z: 0.90306395}
+  m_LocalPosition: {x: -16.072407, y: 9.17, z: -1.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14618,7 +14618,7 @@ GameObject:
   - component: {fileID: 1163974754}
   - component: {fileID: 1163974753}
   - component: {fileID: 1163974752}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Celebration (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19470,7 +19470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163974751}
   m_LocalRotation: {x: -0.4255475, y: 0.56472063, z: -0.56472063, w: 0.4255475}
-  m_LocalPosition: {x: 6.837594, y: 9.207432, z: 0.90306395}
+  m_LocalPosition: {x: 6.837594, y: 9.210001, z: -1.8299999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21323,6 +21323,7 @@ GameObject:
   - component: {fileID: 1519627229}
   - component: {fileID: 1519627230}
   - component: {fileID: 1519627231}
+  - component: {fileID: 1519627232}
   m_Layer: 0
   m_Name: LevelComplete
   m_TagString: Untagged
@@ -21372,6 +21373,7 @@ MonoBehaviour:
   Celebration: {fileID: 1163974753}
   Celebration2: {fileID: 468372822}
   LevelCompletion: {fileID: 1519627231}
+  fade: {fileID: 1519627232}
 --- !u!82 &1519627231
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21468,6 +21470,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1519627232
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519627228}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e7184449ffae06645af11c160379e5b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1521301723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24415,7 +24437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1928964723}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: CelebrationPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24430,7 +24452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928964722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.612406, y: -2.6574311, z: -0.90306395}
+  m_LocalPosition: {x: 4.612406, y: -2.6574311, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
