@@ -16,32 +16,32 @@ public class LevelComplete : MonoBehaviour
     public GameObject Fade;
     private LevelsFade levelsFade;
     public GameObject nextButton;
-    public Animator anim;
+    public GameObject WindowChanger;
     // Start is called before the first frame update
     void Start()
     {   
         levelsFade = Fade.GetComponent<LevelsFade>();
-        won = false;       
-        anim = GetComponent<Animator>();
-                        
+        won = false;
+        StartFirstLevel();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(i);
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            StartFirstLevel();
-        }
+        Debug.Log(i);       
+            
+        
     }
 
     public void levelWon()
-    {
-        nextButton.SetActive(true);
+    {        
         won = true;
         Debug.Log("Winner");
-        StartCoroutine(levelDelay());
+        LevelCompletion.Play();
+        Celebration.Play();
+        Celebration2.Play();
+        nextButton.SetActive(true);
+        
                 
     }
 
@@ -74,25 +74,25 @@ public class LevelComplete : MonoBehaviour
         levels[i].SetActive(true);
         
     }
+   
 
-    IEnumerator levelDelay()
+    IEnumerator LevelChangeDelay()
     {
-        LevelCompletion.Play();
-        Celebration.Play();
-        Celebration2.Play();
-        
-        yield return new WaitForSeconds(2f); //confetti celebration wait time
-       
+        yield return new WaitForSeconds(1f);                  
         levelChanger();
-    }
-
-    IEnumerator simpleDelay()
-    {
-        yield return new WaitForSeconds(4f);
     }
     public void Newbutton()
     {
-        anim.Play("Temp");
+        if (i!=2 && i!=5)
+        {
+            WindowChanger.GetComponent<Animator>().Play("LevelChange");
+            StartCoroutine(LevelChangeDelay());
+        }
+        else
+        {
+            levelChanger();
+        }
+         
     }
         
 }

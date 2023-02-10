@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelsFade : MonoBehaviour
 {
     public Animator transition;
-    [SerializeField] private float waitTime = 2f;
+    [SerializeField] private float waitTime = 1f;
     // Start is called before the first frame update   
 
     public void LoadNext()
