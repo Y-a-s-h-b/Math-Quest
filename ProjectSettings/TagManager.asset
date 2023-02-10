@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DropSlot
   - DARig
+  - NPC
   layers:
   - Default
   - TransparentFX

@@ -4,11 +4,13 @@ using UnityEngine;
 using TMPro;
 
 [System.Serializable]
-public class Dialogue:MonoBehaviour
+public class Dialogue
 {
-    private string[] sentances;
-    [TextArea(3,10)]
+    
     public string Name;
+    [TextArea(3, 10)]
+    public string[] sentences;
+    
    
     
 }
