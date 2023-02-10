@@ -10,13 +10,9 @@ public class LevelLoad : MonoBehaviour
     public Animator transition;
     [SerializeField] private float waitTime = 2f;
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    
     void Update()
     {
-
         dialogueManager = dial.GetComponent<DialogueManager>();
         if (dialogueManager.nextScene == true)
         {

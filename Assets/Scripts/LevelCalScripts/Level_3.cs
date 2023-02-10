@@ -16,6 +16,7 @@ public class Level_3 : MonoBehaviour
     private void Start()
     {
         levelCompleteScript = FindObjectOfType<LevelComplete>();
+        
     }
     private void Update()
     {       

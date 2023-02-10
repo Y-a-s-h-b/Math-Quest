@@ -7,20 +7,11 @@ public class LevelsFade : MonoBehaviour
 {
     public Animator transition;
     [SerializeField] private float waitTime = 2f;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-    void Update()
-    {
-    }
-
+    // Start is called before the first frame update   
 
     public void LoadNext()
     {
         StartCoroutine(LoadLevel(1));
-
     }
 
     IEnumerator LoadLevel(int levelIndex)

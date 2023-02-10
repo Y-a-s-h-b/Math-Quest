@@ -22,6 +22,7 @@ public class Level_1 : MonoBehaviour
     private void Update()
     {
         checker();
+        
     }
 
     void checker()

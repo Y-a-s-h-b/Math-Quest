@@ -43,12 +43,11 @@ public class LevelComplete : MonoBehaviour
 
     private void levelChanger()
     {        
-        levels[i].SetActive(false);
+        levels[i].SetActive(false); 
+        
         if (i==2)
         {
-
-            levelsFade.LoadNext();
-            
+            levelsFade.LoadNext();            
         }
         if (i==5)
         {
@@ -56,7 +55,8 @@ public class LevelComplete : MonoBehaviour
         }
         if (i!=2 && i!=5)
         {
-            levels[i + 1].SetActive(true);
+            levels[i + 1].SetActive(true);           
+            
         }
         i += 1;
         if (i == 9)
@@ -68,6 +68,7 @@ public class LevelComplete : MonoBehaviour
     private void StartFirstLevel()
     {
         levels[i].SetActive(true);
+        
     }
 
     IEnumerator levelDelay()
@@ -75,7 +76,9 @@ public class LevelComplete : MonoBehaviour
         LevelCompletion.Play();
         Celebration.Play();
         Celebration2.Play();
-        yield return new WaitForSeconds(2f);        
+        
+        yield return new WaitForSeconds(2f); //confetti celebration wait time
+       
         levelChanger();
     }
 
@@ -83,4 +86,5 @@ public class LevelComplete : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
     }
+        
 }
