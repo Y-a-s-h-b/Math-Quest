@@ -13,10 +13,12 @@ public class LevelComplete : MonoBehaviour
     public ParticleSystem Celebration;
     public ParticleSystem Celebration2;
     public AudioSource LevelCompletion;
-    public Animator fade;
+    public GameObject Fade;
+    private LevelsFade levelsFade;
     // Start is called before the first frame update
     void Start()
-    {        
+    {   
+        levelsFade = Fade.GetComponent<LevelsFade>();
         won = false;                
                         
     }
@@ -44,14 +46,13 @@ public class LevelComplete : MonoBehaviour
         levels[i].SetActive(false);
         if (i==2)
         {
-            fade.SetTrigger("Start");
-            SceneManager.LoadScene(1);
+
+            levelsFade.LoadNext();
             
         }
         if (i==5)
         {
-            fade.SetTrigger("Start");
-            SceneManager.LoadScene(1);            
+            levelsFade.LoadNext();
         }
         if (i!=2 && i!=5)
         {
