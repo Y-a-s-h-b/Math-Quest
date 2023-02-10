@@ -15,12 +15,15 @@ public class SeeSawModifier : MonoBehaviour
     private float timeCount = 0.0f;
     private float massMultiplier;
     public WeightSum weightScript;
+    private LevelComplete levelCompleteScript;
+    private bool won;
 
 
     void Start()
     {
         massMultiplier = weightScript.massMultiplier;
-        
+        levelCompleteScript = FindObjectOfType<LevelComplete>();
+        won = false;
     }
 
     private void Update()
@@ -35,10 +38,13 @@ public class SeeSawModifier : MonoBehaviour
         {
             transform.rotation = Quaternion.Lerp(currTrans.rotation, new Quaternion(0f, 0f, 0f, 1), timeCount * comeBackSpeed);
             timeCount = timeCount + Time.deltaTime;
-            if (posiFiexer)
+            
+            if (posiFiexer && !won)
             {
                 this.GetComponent<BoxCollider2D>().enabled = false;
                 posiFiexer = false;
+                won = true;
+                levelCompleteScript.levelWon();
             }
         }
 

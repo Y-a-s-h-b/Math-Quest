@@ -9,6 +9,8 @@ public class DragController : MonoBehaviour
     private Vector2 screenPosition;
     private Vector3 worldPosition;
     private Draggable lastDragged;
+    [SerializeField] private AudioSource NumberHold;
+    
 
     private void Awake()
     {
@@ -24,6 +26,7 @@ public class DragController : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended))
             {
+                
                 Drop();
                 return;
             }
@@ -66,18 +69,21 @@ public class DragController : MonoBehaviour
 
     void InitDrag()
     {
+        NumberHold.Play();
         lastDragged.LastPosition = lastDragged.transform.position;
         UpdateDragStatus(true);
     }
 
     void Drag()
     {
+        
         lastDragged.transform.position = new Vector2(worldPosition.x, worldPosition.y);
     }
     
 
     void Drop()
     {
+        
         UpdateDragStatus(false);
     }
 

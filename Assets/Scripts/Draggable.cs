@@ -12,11 +12,12 @@ public class Draggable : MonoBehaviour
 
     private float movementTime = 15f;
     private System.Nullable<Vector3> movementDestination;
-
+    private AudioSource NumberRelease;
     void Start()
     {
         colliderObj = GetComponent<Collider2D>();
         dragController = FindObjectOfType<DragController>();
+        NumberRelease = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -42,7 +43,7 @@ public class Draggable : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("innnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn");
+        
         Draggable collidedDraggable = other.GetComponent<Draggable>();
 
         if (collidedDraggable != null && dragController.LastDragged.gameObject == gameObject)
@@ -54,6 +55,7 @@ public class Draggable : MonoBehaviour
 
         if (other.CompareTag("DropSlot"))
         {
+            NumberRelease.Play();
             movementDestination = other.transform.position;
         }
     }

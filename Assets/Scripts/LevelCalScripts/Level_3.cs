@@ -10,6 +10,13 @@ public class Level_3 : MonoBehaviour
     public GameObject emptyBox1;
     public GameObject emptyBox2;
     public GameObject emptyBox3;
+    private LevelComplete levelCompleteScript;
+    private bool won;
+
+    private void Start()
+    {
+        levelCompleteScript = FindObjectOfType<LevelComplete>();
+    }
     private void Update()
     {       
         checker();
@@ -21,18 +28,16 @@ public class Level_3 : MonoBehaviour
         num2 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;
         symb = emptyBox2.GetComponent<SymbolIdentifier>().Symbol;
 
-        if (num1 != 'k' && num2 != 'k')
+        if (num1 != 'k' && num2 != 'k' &&!won)
         {
             int a = num1 - '0';
             int b = num2 - '0';
             if (a - b == 7)
             {
-                Debug.Log("Winner");
+                levelCompleteScript.levelWon();
+                won = true;
             }
-            else
-            {
-                Debug.Log(a + b);
-            }
+            
         }
 
     }

@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Level_5 : MonoBehaviour
 {
-    private char num1 = 'a';    
+    private char num1 = 'a';
     public GameObject signEmptyBox;
     public GameObject emptyBox3;
     private char symb = 'a';
+    private LevelComplete levelCompleteScript;
+    private bool won;
+    private void Start()
+    {
+        levelCompleteScript = FindObjectOfType<LevelComplete>();
+        won = false;
+    }
     private void Update()
     {
         checker();
@@ -18,25 +25,25 @@ public class Level_5 : MonoBehaviour
         num1 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;
         symb = signEmptyBox.GetComponent<SymbolIdentifier>().Symbol;
 
-        if (num1 != 'k' && symb!='k')
+        if (num1 != 'k' && symb != 'k' &&!won)
         {
             int a = num1 - '0';
-            
-            if (symb=='x' && a==8)
+
+            if (symb == 'x' && a == 8)
             {
-                Debug.Log("Winner");
+                won = true;
+                levelCompleteScript.levelWon();
             }
-            else if (symb=='+' && a==6 )
+            else if (symb == '+' && a == 6)
             {
-                Debug.Log("Winner");
+                won = true;
+                levelCompleteScript.levelWon();
+
             }
-            else
-            {
-                Debug.Log(a);
-                Debug.Log(symb);
-            }
+
 
         }
 
     }
 }
+
