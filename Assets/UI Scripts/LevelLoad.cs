@@ -9,6 +9,7 @@ public class LevelLoad : MonoBehaviour
     private DialogueManager dialogueManager;
     public Animator transition;
     [SerializeField] private float waitTime = 2f;
+    public static int intSaver = 0;
     // Start is called before the first frame update
     
     void Update()
@@ -23,7 +24,10 @@ public class LevelLoad : MonoBehaviour
 
     public void LoadNext()
     {
+
+        intSaver++;
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+
 
     }
 

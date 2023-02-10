@@ -10,11 +10,11 @@ public class Movement : MonoBehaviour
     [SerializeField] float speed;
     Rigidbody2D rb;
     Animator anim;
-    public float timeToBlink;
     public Joystick joystick;
     private float movX;
     private StandaloneInputModule inputModule;
     public GameObject joy;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -72,10 +72,10 @@ public class Movement : MonoBehaviour
             anim.SetBool("walk", false);
             movX = 0;
             }
-            /*if (joystick.Horizontal < 0.2f && joystick.Horizontal > -0.2f && joystick.Vertical < 0.5f)
-            {
-                anim.Play("Idle_01");
-            }*/
+        /*if (joystick.Horizontal < 0.2f && joystick.Horizontal > -0.2f && joystick.Vertical < 0.5f)
+        {
+            anim.Play("Idle_01");
+        }*/
 
     }
     private void OnTriggerEnter2D(Collider2D Collider)
@@ -100,4 +100,5 @@ public class Movement : MonoBehaviour
             joystick.enabled = true;
         }
     }
+    
 }
