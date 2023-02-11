@@ -18,7 +18,8 @@ public class Hagrid : MonoBehaviour
         {
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             anim.SetTrigger("destroy");
-            gameObject.SetActive(true);
+           
+            
         }
         
     }
@@ -28,6 +29,7 @@ public class Hagrid : MonoBehaviour
         {
             uiObject.SetActive(true);
             dialogueTrigger.TriggerDialogue();
+            gameObject.SetActive(true);
 
         }
 
