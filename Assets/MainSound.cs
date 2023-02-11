@@ -7,9 +7,18 @@ public class MainSound : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]private AudioSource sourceSong;
     [SerializeField] private AudioSource ButtonClick;
+    public static MainSound instance;
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (instance==null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else if (instance!=null)
+        {
+            Destroy(this);
+        }
         
     }
     

@@ -25,6 +25,10 @@ public class LevelComplete : MonoBehaviour
         levelsFade = Fade.GetComponent<LevelsFade>();
         won = false;
         StartFirstLevel();
+        if (LevelLoad.intSaver==1)
+        {
+            i = 0;
+        }
     }
 
     // Update is called once per frame
