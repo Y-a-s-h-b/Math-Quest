@@ -14,7 +14,7 @@ public class SoundManager : MonoBehaviour
             load();
         }
         else
-        {
+        {  
             load();
         }
     }
