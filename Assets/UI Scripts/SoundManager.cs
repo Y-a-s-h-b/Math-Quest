@@ -8,9 +8,9 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!PlayerPrefs.HasKey("musicValue"))
+        if (!PlayerPrefs.HasKey("musicVolume"))
         {
-            PlayerPrefs.SetFloat("musicValue",1);
+            PlayerPrefs.SetFloat("musicVolume",1);
             load();
         }
         else
