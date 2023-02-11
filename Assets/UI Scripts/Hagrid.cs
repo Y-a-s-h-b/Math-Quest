@@ -6,15 +6,21 @@ public class Hagrid : MonoBehaviour
 {
     public GameObject uiObject;
     public DialogueTrigger dialogueTrigger;
+    private Animator anim;
+    public GameObject Book;
     // Start is called before the first frame update
     void Start()
     {
+        anim= GetComponent<Animator>();
         dialogueTrigger = GetComponent<DialogueTrigger>();
         uiObject.SetActive(false);
         if (LevelLoad.intSaver==3)
         {
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            anim.SetTrigger("destroy");
+            gameObject.SetActive(true);
         }
+        
     }
     void OnTriggerEnter2D(Collider2D Collider)
     {
