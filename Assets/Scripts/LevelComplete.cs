@@ -13,10 +13,12 @@ public class LevelComplete : MonoBehaviour
     public ParticleSystem Celebration;
     public ParticleSystem Celebration2;
     public AudioSource LevelCompletion;
+    public AudioSource NextLevelButtonSound;
     public GameObject Fade;
     private LevelsFade levelsFade;
     public GameObject nextButton;
     public GameObject WindowChanger;
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -87,6 +89,7 @@ public class LevelComplete : MonoBehaviour
     }
     public void Newbutton()
     {
+        NextLevelButtonSound.Play();
         if (i!=2 && i!=5 && i!=9)
         {
             WindowChanger.GetComponent<Animator>().Play("LevelChange");
@@ -96,6 +99,7 @@ public class LevelComplete : MonoBehaviour
         {
             levelChanger();
         }
+
          
     }
         
