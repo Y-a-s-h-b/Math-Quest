@@ -5,6 +5,7 @@ using UnityEngine;
 public class FirstDialogue : MonoBehaviour
 {
     public GameObject uiObject;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -17,12 +18,10 @@ public class FirstDialogue : MonoBehaviour
         if (Collider.gameObject.CompareTag("Respawn"))
         {
             uiObject.SetActive(true);
+            
+
 
         }
 
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        uiObject.SetActive(false);
     }
 }
