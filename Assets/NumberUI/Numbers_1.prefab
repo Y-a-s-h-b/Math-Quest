@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6974849067275010264}
   - component: {fileID: 6974849067275010265}
-  - component: {fileID: -620858209591779996}
   - component: {fileID: -3468941499715589737}
   - component: {fileID: -2321833723031641275}
   - component: {fileID: 325468660620855684}
   - component: {fileID: -2795362263599236108}
+  - component: {fileID: 6608515600371480511}
   m_Layer: 0
   m_Name: Numbers_1
   m_TagString: Untagged
@@ -89,20 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-620858209591779996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6974849067275010270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af4c8be850ba6cf47b912619823fd9e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsDragging: 0
-  LastPosition: {x: 0, y: 0, z: 0}
 --- !u!61 &-3468941499715589737
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -259,3 +245,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6608515600371480511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6974849067275010270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7079c60e77338994c9885c19aee0024f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drag: 0
