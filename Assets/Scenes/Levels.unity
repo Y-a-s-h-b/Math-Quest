@@ -689,7 +689,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 506569728}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &50395689
 MonoBehaviour:
@@ -2313,6 +2313,7 @@ GameObject:
   - component: {fileID: 219708429}
   - component: {fileID: 219708428}
   - component: {fileID: 219708427}
+  - component: {fileID: 219708430}
   m_Layer: 0
   m_Name: HoldingBoxes (3)
   m_TagString: DropSlot
@@ -2428,6 +2429,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &219708430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219708425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!114 &228739966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2749,6 +2763,7 @@ GameObject:
   - component: {fileID: 287411895}
   - component: {fileID: 287411893}
   - component: {fileID: 287411896}
+  - component: {fileID: 287411897}
   m_Layer: 0
   m_Name: HoldingBoxes (4)
   m_TagString: DropSlot
@@ -2864,6 +2879,19 @@ MonoBehaviour:
   weight: 0
   weightScript: {fileID: 1969428422}
   rb: {fileID: 1153376199}
+--- !u!114 &287411897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287411891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1001 &296236690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4589,6 +4617,19 @@ MonoBehaviour:
   Symbol: 0
   weightScript: {fileID: 0}
   weightScript2: {fileID: 0}
+--- !u!114 &437988951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437988947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1001 &441317810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10128,7 +10169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &506569728
 Transform:
   m_ObjectHideFlags: 0
@@ -10148,10 +10189,10 @@ Transform:
   - {fileID: 3123596145115143969}
   - {fileID: 3123596143573340296}
   - {fileID: 960995651}
+  - {fileID: 1717576890}
   - {fileID: 50395688}
   - {fileID: 1362159079}
   - {fileID: 1433217031}
-  - {fileID: 1717576890}
   m_Father: {fileID: 458405088}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10199,6 +10240,7 @@ GameObject:
   - component: {fileID: 523918253}
   - component: {fileID: 523918251}
   - component: {fileID: 523918255}
+  - component: {fileID: 523918256}
   m_Layer: 0
   m_Name: HoldingBoxes (1)
   m_TagString: DropSlot
@@ -10314,6 +10356,19 @@ MonoBehaviour:
   weight: 0
   weightScript: {fileID: 2097489025}
   rb: {fileID: 2130622773}
+--- !u!114 &523918256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523918250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1 &546164673
 GameObject:
   m_ObjectHideFlags: 0
@@ -10813,6 +10868,19 @@ MonoBehaviour:
   Symbol: 0
   weightScript: {fileID: 0}
   weightScript2: {fileID: 0}
+--- !u!114 &562592828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562592824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1 &575230434
 GameObject:
   m_ObjectHideFlags: 0
@@ -11095,6 +11163,19 @@ MonoBehaviour:
   Symbol: 0
   weightScript: {fileID: 0}
   weightScript2: {fileID: 0}
+--- !u!114 &629018133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629018128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1001 &660933178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12462,6 +12543,7 @@ GameObject:
   - component: {fileID: 867434036}
   - component: {fileID: 867434034}
   - component: {fileID: 867434038}
+  - component: {fileID: 867434039}
   m_Layer: 0
   m_Name: HoldingBoxes
   m_TagString: DropSlot
@@ -12577,6 +12659,19 @@ MonoBehaviour:
   weight: 0
   weightScript: {fileID: 2097489025}
   rb: {fileID: 2130622773}
+--- !u!114 &867434039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867434033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!4 &871866560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6617282371253816177, guid: 46f62dc23e2949f48802367dc77baa4e, type: 3}
@@ -12716,6 +12811,7 @@ GameObject:
   - component: {fileID: 891659925}
   - component: {fileID: 891659923}
   - component: {fileID: 891659926}
+  - component: {fileID: 891659927}
   m_Layer: 0
   m_Name: HoldingBoxes (3)
   m_TagString: DropSlot
@@ -12831,6 +12927,19 @@ MonoBehaviour:
   Symbol: 107
   weightScript: {fileID: 1969428422}
   weightScript2: {fileID: 0}
+--- !u!114 &891659927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891659921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!4 &926469674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9195340606720839297, guid: 8f67ff25052a7414fad475ff26c41035, type: 3}
@@ -13360,6 +13469,7 @@ GameObject:
   - component: {fileID: 996537776}
   - component: {fileID: 996537775}
   - component: {fileID: 996537778}
+  - component: {fileID: 996537779}
   m_Layer: 0
   m_Name: HoldingBoxes (1)
   m_TagString: DropSlot
@@ -13475,6 +13585,19 @@ MonoBehaviour:
   weight: 0
   weightScript: {fileID: 1781024275}
   rb: {fileID: 1153376199}
+--- !u!114 &996537779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996537773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1 &999548817
 GameObject:
   m_ObjectHideFlags: 0
@@ -14763,6 +14886,19 @@ MonoBehaviour:
   Symbol: 0
   weightScript: {fileID: 0}
   weightScript2: {fileID: 0}
+--- !u!114 &1084388224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084388220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1 &1086038744
 GameObject:
   m_ObjectHideFlags: 0
@@ -14893,6 +15029,7 @@ GameObject:
   - component: {fileID: 1115829228}
   - component: {fileID: 1115829227}
   - component: {fileID: 1115829230}
+  - component: {fileID: 1115829231}
   m_Layer: 0
   m_Name: HoldingBoxes
   m_TagString: DropSlot
@@ -15008,6 +15145,19 @@ MonoBehaviour:
   Symbol: 107
   weightScript: {fileID: 0}
   weightScript2: {fileID: 1781024275}
+--- !u!114 &1115829231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115829225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1 &1125057749
 GameObject:
   m_ObjectHideFlags: 0
@@ -15020,6 +15170,7 @@ GameObject:
   - component: {fileID: 1125057752}
   - component: {fileID: 1125057751}
   - component: {fileID: 1125057750}
+  - component: {fileID: 1125057754}
   m_Layer: 0
   m_Name: HoldingBoxes (2)
   m_TagString: DropSlot
@@ -15135,6 +15286,19 @@ Transform:
   m_Father: {fileID: 1971362513}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1125057754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125057749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1 &1133382744
 GameObject:
   m_ObjectHideFlags: 0
@@ -21028,7 +21192,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 506569728}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1362159080
 BoxCollider2D:
@@ -21446,6 +21610,19 @@ MonoBehaviour:
   Symbol: 0
   weightScript: {fileID: 0}
   weightScript2: {fileID: 0}
+--- !u!114 &1390475512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390475507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1 &1401632777
 GameObject:
   m_ObjectHideFlags: 0
@@ -21753,7 +21930,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 506569728}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1433217032
 SpriteRenderer:
@@ -22462,7 +22639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1519627229
 Transform:
   m_ObjectHideFlags: 0
@@ -23108,6 +23285,19 @@ MonoBehaviour:
   Symbol: 0
   weightScript: {fileID: 0}
   weightScript2: {fileID: 0}
+--- !u!114 &1566545450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566545445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!4 &1567577825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5160784810698188101, guid: 0560d2d0ad28a4747a8a0eb7837baf63, type: 3}
@@ -24338,6 +24528,19 @@ MonoBehaviour:
   Symbol: 0
   weightScript: {fileID: 0}
   weightScript2: {fileID: 0}
+--- !u!114 &1685592485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685592480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1001 &1703985580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24686,7 +24889,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 506569728}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1717576891
 MonoBehaviour:
@@ -24984,6 +25187,7 @@ GameObject:
   - component: {fileID: 1781667222}
   - component: {fileID: 1781667220}
   - component: {fileID: 1781667224}
+  - component: {fileID: 1781667225}
   m_Layer: 0
   m_Name: HoldingBoxes (2)
   m_TagString: DropSlot
@@ -25099,6 +25303,19 @@ MonoBehaviour:
   weight: 0
   weightScript: {fileID: 1969428422}
   rb: {fileID: 1153376199}
+--- !u!114 &1781667225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781667219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1001 &1799356770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26335,7 +26552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slot1: {fileID: 960995650}
-  slot2: {fileID: 0}
+  slot2: {fileID: 1717576889}
   massMultiplier: 3
 --- !u!114 &1950694906
 MonoBehaviour:
@@ -28410,6 +28627,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 920938384371045644, guid: c5383caaab1dba54590ce5c5f9903747, type: 3}
   m_PrefabInstance: {fileID: 1521301723}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &920938383471570394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920938383471570380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1001 &920938384340256376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29802,6 +30032,7 @@ GameObject:
   - component: {fileID: 3769432918149066137}
   - component: {fileID: 3769432918149066139}
   - component: {fileID: 866915354}
+  - component: {fileID: 3769432918149066152}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: DropSlot
@@ -29809,6 +30040,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3769432918149066152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3769432918149066151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!1001 &3769432919914830920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29938,6 +30182,19 @@ MonoBehaviour:
   Symbol: 0
   weightScript: {fileID: 0}
   weightScript2: {fileID: 0}
+--- !u!114 &4693483388940141658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693483388940141654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834bc611f3627143b33ee94e9114f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numName: 
 --- !u!4 &4751669268308330033
 Transform:
   m_ObjectHideFlags: 0
