@@ -72,14 +72,9 @@ public class NewDrag : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("DropSlot") && this.gameObject.name.Substring(0,4)!="Sign")
+        if (other.CompareTag("DropSlot"))
         {
             movementDestination = other.transform.position;          
-        }
-
-        if (other.CompareTag("DropSlotSign") && this.gameObject.name.Substring(0, 4) == "Sign")
-        {
-            movementDestination = other.transform.position;
         }
     }
 
