@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level_3 : MonoBehaviour
+public class Level_3 : MonoBehaviour, ILevelCheckable
 {
     private char num1 = 'a';
     private char num2 = 'a';
@@ -20,10 +20,10 @@ public class Level_3 : MonoBehaviour
     }
     private void Update()
     {       
-        checker();
+        //checker();
     }
 
-    void checker()
+    public void checker()
     {
         num1 = emptyBox1.GetComponent<SymbolIdentifier>().Symbol;
         num2 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;

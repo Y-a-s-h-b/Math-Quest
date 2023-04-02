@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level_5 : MonoBehaviour
+public class Level_5 : MonoBehaviour, ILevelCheckable
 {
     private char num1 = 'a';
     public GameObject signEmptyBox;
@@ -17,10 +17,10 @@ public class Level_5 : MonoBehaviour
     }
     private void Update()
     {
-        checker();
+        //checker();
     }
 
-    void checker()
+    public void checker()
     {
         num1 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;
         symb = signEmptyBox.GetComponent<SymbolIdentifier>().Symbol;

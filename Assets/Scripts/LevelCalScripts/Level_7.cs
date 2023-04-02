@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class Level_7 : MonoBehaviour
+public class Level_7 : MonoBehaviour, ILevelCheckable
 {
     private char num1 = 'a';
     private char num2 = 'a';
@@ -18,17 +18,14 @@ public class Level_7 : MonoBehaviour
         levelCompleteScript = FindObjectOfType<LevelComplete>();
         won = false;
     }
-    private void Update()
-    {
-        checker();
-    }
+    
 
-    void checker()
+    public void checker()
     {
         num1 = emptyBox1.GetComponent<SymbolIdentifier>().Symbol;
         num2 = emptyBox2.GetComponent<SymbolIdentifier>().Symbol;
         num3 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;
-        ;
+        
         if (num1 != 'k' && num2 != 'k' && num3 != 'k' &&!won)
         {
             

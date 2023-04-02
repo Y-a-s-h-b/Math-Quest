@@ -5,7 +5,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Level_1 : MonoBehaviour
+public class Level_1 : MonoBehaviour , ILevelCheckable
 {
     private char num1 = 'a';
     private char num2 = 'a';    
@@ -21,11 +21,11 @@ public class Level_1 : MonoBehaviour
     }
     private void Update()
     {
-        checker();
+        //checker();
         
     }
 
-    void checker()
+    public void checker()
     {
         num1 = emptyBox1.GetComponent<SymbolIdentifier>().Symbol;
         num2 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level_9 : MonoBehaviour
+public class Level_9 : MonoBehaviour, ILevelCheckable
 {
     private char num1 = 'a';
     private char num2 = 'a';
@@ -17,12 +17,9 @@ public class Level_9 : MonoBehaviour
         levelCompleteScript = FindObjectOfType<LevelComplete>();
         won = false;
     }
-    private void Update()
-    {
-        checker();
-    }
+    
 
-    void checker()
+    public void checker()
     {
         num1 = emptyBox1.GetComponent<SymbolIdentifier>().Symbol;
         num2 = emptyBox2.GetComponent<SymbolIdentifier>().Symbol;
