@@ -6,18 +6,21 @@ public class LevelCheckButton : MonoBehaviour
 {
     public GameObject parentOfObject;
     private ILevelCheckable subScript;
+    private bool won = false;
 
     public void checkCaller()
     {
         subScript = parentOfObject.GetComponentInChildren<ILevelCheckable>();
         if (subScript != null)
         {
-            subScript.checker();
+            won = subScript.checker();
         }
         else
         {
             Debug.Log("Error");
         }
+
+        Debug.Log(won);
     }
 
     public void testButton()

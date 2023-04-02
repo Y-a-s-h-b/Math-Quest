@@ -32,22 +32,14 @@ public class LevelComplete : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(i);       
-            
-        
-    }
-
+   
     public void levelWon()
     {        
-        won = true;
-        Debug.Log("Winner");
+        won = true;        
         LevelCompletion.Play();
         Celebration.Play();
         Celebration2.Play();
-        nextButton.SetActive(true);
-        
+        nextButton.SetActive(true);       
                 
     }
 
@@ -103,7 +95,6 @@ public class LevelComplete : MonoBehaviour
         {
             levelChanger();
         }
-
          
     }
         

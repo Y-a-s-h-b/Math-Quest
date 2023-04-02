@@ -20,7 +20,7 @@ public class Level_7 : MonoBehaviour, ILevelCheckable
     }
     
 
-    public void checker()
+    public bool checker()
     {
         num1 = emptyBox1.GetComponent<SymbolIdentifier>().Symbol;
         num2 = emptyBox2.GetComponent<SymbolIdentifier>().Symbol;
@@ -40,6 +40,7 @@ public class Level_7 : MonoBehaviour, ILevelCheckable
             }
             
         }
+        return won;
        
     }
 }

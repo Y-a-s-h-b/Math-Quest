@@ -15,12 +15,8 @@ public class Level_5 : MonoBehaviour, ILevelCheckable
         levelCompleteScript = FindObjectOfType<LevelComplete>();
         won = false;
     }
-    private void Update()
-    {
-        //checker();
-    }
-
-    public void checker()
+   
+    public bool checker()
     {
         num1 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;
         symb = signEmptyBox.GetComponent<SymbolIdentifier>().Symbol;
@@ -43,6 +39,8 @@ public class Level_5 : MonoBehaviour, ILevelCheckable
 
 
         }
+
+        return won;
 
     }
 }

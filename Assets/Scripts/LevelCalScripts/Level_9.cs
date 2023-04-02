@@ -19,12 +19,12 @@ public class Level_9 : MonoBehaviour, ILevelCheckable
     }
     
 
-    public void checker()
+    public bool checker()
     {
         num1 = emptyBox1.GetComponent<SymbolIdentifier>().Symbol;
         num2 = emptyBox2.GetComponent<SymbolIdentifier>().Symbol;
         num3 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;
-        ;
+        
         if (num1 != 'k' && num2 != 'k' && num3 != 'k' &&!won)
         {
 
@@ -39,6 +39,8 @@ public class Level_9 : MonoBehaviour, ILevelCheckable
             }
 
         }
+
+        return won;
 
     }
 }

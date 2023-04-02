@@ -20,7 +20,7 @@ public class GroundCheck : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(this.transform.localPosition.x);
+        
         checkingGround = Physics2D.OverlapCircle(groundCheck.position, circleRadius, groundLayer);
         fix();
     }

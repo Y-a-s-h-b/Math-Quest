@@ -18,7 +18,7 @@ public class Level_4 : MonoBehaviour, ILevelCheckable
     }
     
 
-    public void checker()
+    public bool checker()
     {
         symb = emptyBox1.GetComponent<SymbolIdentifier>().Symbol;
 
@@ -32,6 +32,8 @@ public class Level_4 : MonoBehaviour, ILevelCheckable
             }
             
         }
+
+        return won;
 
     }
 }

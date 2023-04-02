@@ -55,7 +55,7 @@ public class NewDrag : MonoBehaviour
         {
             if (!drag)
             {
-                Debug.Log("return to original posi");
+                
                 transform.position = Vector3.Lerp(transform.position, initialPosition, movementTime * Time.fixedDeltaTime);
             }
         }

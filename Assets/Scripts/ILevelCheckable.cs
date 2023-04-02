@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ILevelCheckable
 {
-    void checker();
+    bool checker();
 }
