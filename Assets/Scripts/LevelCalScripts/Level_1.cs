@@ -19,11 +19,7 @@ public class Level_1 : MonoBehaviour , ILevelCheckable
         levelCompleteScript = FindObjectOfType<LevelComplete>();
         won = false;
     }
-    private void Update()
-    {
-        //checker();
-        
-    }
+    
 
     public bool checker()
     {

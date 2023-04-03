@@ -76,7 +76,7 @@ public class LevelComplete : MonoBehaviour
     private void StartFirstLevel()
     {
         levels[i].SetActive(true);
-        checkButton.SetActive(true);
+        StartCoroutine(CheckButtonOnDelay(0.6f));
     }
    
 
@@ -92,18 +92,21 @@ public class LevelComplete : MonoBehaviour
         {
             WindowChanger.GetComponent<Animator>().Play("LevelChange");
             StartCoroutine(LevelChangeDelay());
+            
         }
         else
         {
             levelChanger();
         }
 
-        StartCoroutine(CheckButtonOnDelay());         
+        
+        StartCoroutine(CheckButtonOnDelay(1f));
+
     }
 
-    IEnumerator CheckButtonOnDelay()
+    IEnumerator CheckButtonOnDelay(float timeDelay)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(timeDelay);
         checkButton.SetActive(true);
     }
         
