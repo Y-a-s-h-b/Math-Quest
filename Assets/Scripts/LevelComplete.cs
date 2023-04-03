@@ -18,6 +18,7 @@ public class LevelComplete : MonoBehaviour
     private LevelsFade levelsFade;
     public GameObject nextButton;
     public GameObject WindowChanger;
+    public GameObject checkButton;
 
     // Start is called before the first frame update
     void Start()
@@ -34,13 +35,14 @@ public class LevelComplete : MonoBehaviour
     // Update is called once per frame
    
     public void levelWon()
-    {        
+    {
+        Debug.Log("levelwon function called");
         won = true;        
         LevelCompletion.Play();
         Celebration.Play();
         Celebration2.Play();
-        nextButton.SetActive(true);       
-                
+        nextButton.SetActive(true);
+                        
     }
 
     private void levelChanger()
@@ -74,7 +76,7 @@ public class LevelComplete : MonoBehaviour
     private void StartFirstLevel()
     {
         levels[i].SetActive(true);
-        
+        checkButton.SetActive(true);
     }
    
 
@@ -95,7 +97,14 @@ public class LevelComplete : MonoBehaviour
         {
             levelChanger();
         }
-         
+
+        StartCoroutine(CheckButtonOnDelay());         
+    }
+
+    IEnumerator CheckButtonOnDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        checkButton.SetActive(true);
     }
         
 }
