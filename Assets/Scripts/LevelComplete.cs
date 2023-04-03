@@ -99,8 +99,12 @@ public class LevelComplete : MonoBehaviour
             levelChanger();
         }
 
+        Debug.Log("level"+i);
+        if (i != 1 && i != 6 && i != 8)
+        {
+            StartCoroutine(CheckButtonOnDelay(1f));
+        }
         
-        StartCoroutine(CheckButtonOnDelay(1f));
 
     }
 
