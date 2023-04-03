@@ -7,7 +7,6 @@ public class Hagrid : MonoBehaviour
     public GameObject uiObject;
     public DialogueTrigger dialogueTrigger;
     private Animator anim;
-    public GameObject Book;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +28,6 @@ public class Hagrid : MonoBehaviour
         {
             uiObject.SetActive(true);
             dialogueTrigger.TriggerDialogue();
-            gameObject.SetActive(true);
 
         }
 
