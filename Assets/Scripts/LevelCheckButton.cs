@@ -6,8 +6,9 @@ public class LevelCheckButton : MonoBehaviour
 {
     public GameObject parentOfObject;
     private ILevelCheckable subScript;
-    private bool won = false;
+    public bool won = false;
     public GameObject checkButton;
+    public Score score;
 
     public void checkCaller()
     {
@@ -27,6 +28,10 @@ public class LevelCheckButton : MonoBehaviour
             checkButton.SetActive(false);
             Debug.Log("button deactivated");
         }
+              
+
+        score.countScore(won);
+
     }
 
   

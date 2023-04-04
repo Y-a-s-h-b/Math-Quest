@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int lives = 3;
+    public CameraShake camShake;
+    public GameOver gameOver;
+    
+    public void countScore(bool won)
     {
-        
-    }
+        if (won)
+        {
+            //won
+        }
+        else
+        {
+            lives -= 1;
+            camShake.start = true;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (lives<=0)
+        {
+            //gameover
+            gameOver.gameOver();
+            Debug.Log("lost");
+        }
     }
 }
+
