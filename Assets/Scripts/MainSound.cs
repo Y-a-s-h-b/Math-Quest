@@ -21,7 +21,11 @@ public class MainSound : MonoBehaviour
         }
         
     }
-    
+
+    private void Start()
+    {
+        sourceSong.Play();
+    }
 
     // Update is called once per frame
     void Update()

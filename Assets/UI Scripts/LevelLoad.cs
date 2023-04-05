@@ -15,7 +15,7 @@ public class LevelLoad : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(intSaver);
+        
         dialogueManager = dial.GetComponent<DialogueManager>();
         if (dialogueManager.nextScene == true)
         {

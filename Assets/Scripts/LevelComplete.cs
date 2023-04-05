@@ -9,7 +9,7 @@ public class LevelComplete : MonoBehaviour
 {
     public bool won;
     public GameObject[] levels;
-    private static int i=0;
+    public static int i=0;
     public ParticleSystem Celebration;
     public ParticleSystem Celebration2;
     public AudioSource LevelCompletion;
@@ -22,7 +22,8 @@ public class LevelComplete : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {
+        
         levelsFade = Fade.GetComponent<LevelsFade>();
         won = false;
         StartFirstLevel();
@@ -30,6 +31,7 @@ public class LevelComplete : MonoBehaviour
         {
             i = 0;
         }
+        Debug.Log("LevelVariable_levelcomplete: " + i);
     }
 
     // Update is called once per frame
@@ -113,5 +115,9 @@ public class LevelComplete : MonoBehaviour
         yield return new WaitForSeconds(timeDelay);
         checkButton.SetActive(true);
     }
-        
+    private void Update()
+    {
+        Debug.Log("LevelVariable_levelcomplete: " + i);
+    }
+
 }
