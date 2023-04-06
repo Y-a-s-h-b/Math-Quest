@@ -33,10 +33,7 @@ public class MainSound : MonoBehaviour
         sourceSong.volume = PlayerPrefs.GetFloat("musicVolume");
     }
 
-    public void buttonSound()
-    {
-        ButtonClick.Play();
-    }
+    
 
     
 }

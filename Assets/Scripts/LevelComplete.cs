@@ -78,7 +78,8 @@ public class LevelComplete : MonoBehaviour
     private void StartFirstLevel()
     {
         levels[i].SetActive(true);
-        StartCoroutine(CheckButtonOnDelay(0.6f));
+        StartCoroutine(CheckButtonOnDelay(0.1f));
+        
     }
    
 
@@ -105,6 +106,7 @@ public class LevelComplete : MonoBehaviour
         if (i != 1 && i != 6 && i != 8)
         {
             StartCoroutine(CheckButtonOnDelay(1f));
+            
         }
         
 
@@ -119,5 +121,5 @@ public class LevelComplete : MonoBehaviour
     {
         Debug.Log("LevelVariable_levelcomplete: " + i);
     }
-
+    
 }
