@@ -8,10 +8,11 @@ public class NewDrag : MonoBehaviour
     private float movementTime = 15f;
     private System.Nullable<Vector3> movementDestination;
     private Vector3 initialPosition;
-    
+    private char NumberDef;
     private void Start()
     {
         initialPosition = transform.position;
+        NumberDef = this.GetComponent<SymbolDefinition>().Number;
     }
     private void OnMouseDown()
     {
@@ -63,19 +64,38 @@ public class NewDrag : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             returnToOriginalPlace();
-        }
-
-       
+        }       
 
     }
 
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("DropSlot"))
+        if (NumberDef == '+' || NumberDef == '-' || NumberDef == 'x')
         {
-            movementDestination = other.transform.position;          
+            if (other.CompareTag("DropSlotSigns"))
+            {
+                movementDestination = other.transform.position;
+            }
         }
+        else
+        {
+            if (other.CompareTag("DropSlot"))
+            {
+                movementDestination = other.transform.position;
+            }
+        }/*
+        if (other.CompareTag("DropSlot") && (NumberDef!='+' || NumberDef != '-' || NumberDef != 'x'))
+        {
+            movementDestination = other.transform.position;
+            Debug.Log("number box_NewDrag");
+        }
+
+        if (other.CompareTag("DropSlotSigns") && (NumberDef == '+' || NumberDef == '-' || NumberDef == 'x'))
+        {
+            movementDestination = other.transform.position;
+            Debug.Log("sign box_NewDrag");
+        }*/
     }
 
     public void returnToOriginalPlace()

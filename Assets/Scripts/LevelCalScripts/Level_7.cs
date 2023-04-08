@@ -38,6 +38,8 @@ public class Level_7 : MonoBehaviour, ILevelCheckable
                 won = true;
                 levelCompleteScript.levelWon();
             }
+
+            Debug.Log((a * b) + c);
             
         }
         return won;

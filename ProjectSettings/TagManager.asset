@@ -7,6 +7,7 @@ TagManager:
   - DropSlot
   - DARig
   - NPC
+  - DropSlotSigns
   layers:
   - Default
   - TransparentFX
