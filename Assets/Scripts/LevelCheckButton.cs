@@ -28,7 +28,8 @@ public class LevelCheckButton : MonoBehaviour
             checkButton.SetActive(false);
             Debug.Log("button deactivated");
         }
-              
+
+        Debug.Log("CheckButtonCALLED_LevelCheckButton");
 
         score.countScore(won);
 

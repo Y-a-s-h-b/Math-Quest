@@ -38,7 +38,7 @@ public class LevelComplete : MonoBehaviour
    
     public void levelWon()
     {
-        Debug.Log("levelwon function called");
+        
         won = true;        
         LevelCompletion.Play();
         Celebration.Play();
@@ -117,9 +117,6 @@ public class LevelComplete : MonoBehaviour
         yield return new WaitForSeconds(timeDelay);
         checkButton.SetActive(true);
     }
-    private void Update()
-    {
-        Debug.Log("LevelVariable_levelcomplete: " + i);
-    }
+    
     
 }

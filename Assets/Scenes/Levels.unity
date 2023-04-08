@@ -14304,7 +14304,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emptyBox1: {fileID: 1677647625}
-  emptyBox2: {fileID: 0}
   emptyBox3: {fileID: 2136099954}
 --- !u!1001 &1010640065
 PrefabInstance:

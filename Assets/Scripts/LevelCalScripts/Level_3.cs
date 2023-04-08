@@ -7,8 +7,7 @@ public class Level_3 : MonoBehaviour, ILevelCheckable
     private char num1 = 'a';
     private char num2 = 'a';
     private char symb = 'a';
-    public GameObject emptyBox1;
-    public GameObject emptyBox2;
+    public GameObject emptyBox1;   
     public GameObject emptyBox3;
     private LevelComplete levelCompleteScript;
     private bool won;
@@ -23,7 +22,7 @@ public class Level_3 : MonoBehaviour, ILevelCheckable
     {
         num1 = emptyBox1.GetComponent<SymbolIdentifier>().Symbol;
         num2 = emptyBox3.GetComponent<SymbolIdentifier>().Symbol;
-        symb = emptyBox2.GetComponent<SymbolIdentifier>().Symbol;
+        
 
         if (num1 != 'k' && num2 != 'k' &&!won)
         {
