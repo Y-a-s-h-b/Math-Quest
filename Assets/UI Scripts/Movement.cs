@@ -6,10 +6,13 @@ using UnityEngine.EventSystems;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] float jump;
-    [SerializeField] float speed;
+    //[SerializeField] float jump;
+    [SerializeField]
+    float speed;
     Rigidbody2D rb;
-    Animator anim;
+
+    [HideInInspector]
+    public Animator anim;
     public Joystick joystick;
     private float movX;
     private StandaloneInputModule inputModule;
@@ -17,8 +20,12 @@ public class Movement : MonoBehaviour
     public Transform Witch1Trns;
     public Transform Witch2Trns;
     public Transform Witch3Trns;
-    private bool isJumping = false;
-    
+
+    public GameObject end;
+
+    //private bool isJumping = false;
+
+
 
 
     // Start is called before the first frame update
@@ -26,7 +33,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        
+
         inputModule = GetComponent<StandaloneInputModule>();
         anim.enabled = true;
         if (LevelLoad.intSaver == 1)
@@ -41,14 +48,12 @@ public class Movement : MonoBehaviour
         {
             this.transform.position = Witch3Trns.position;
         }
-
     }
 
     // Update is called once per frame
     void Update()
     {
         movX = joystick.Horizontal * speed;
-        float verticalMove = joystick.Vertical;
         rb.velocity = new Vector2(movX * speed, rb.velocity.y);
         if (joystick.Horizontal >= 0.5f)
         {
@@ -68,14 +73,12 @@ public class Movement : MonoBehaviour
             anim.SetBool("walk", false);
             anim.SetBool("running", true);
         }
-
         else if (joystick.Horizontal > 0f && joystick.Horizontal < 0.5f)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
             anim.SetBool("idle", false);
             anim.SetBool("running", false);
             anim.SetBool("walk", true);
-
         }
         else if (joystick.Horizontal > -0.5f && joystick.Horizontal < 0f)
         {
@@ -92,7 +95,7 @@ public class Movement : MonoBehaviour
             anim.SetBool("walk", false);
             movX = 0;
         }
-        if (joystick.Vertical > 0.5f && !isJumping)
+        /*if (joystick.Vertical > 0.5f && !isJumping)
         {
             //rb.AddForce(new Vector2(rb.velocity.x, jump));
             anim.SetTrigger("jump");
@@ -107,31 +110,49 @@ public class Movement : MonoBehaviour
             isJumping = false;
             
 
-        }
+        }*/
     }
-    
-    
+
     private void OnTriggerEnter2D(Collider2D Collider)
     {
         if (Collider.gameObject.tag == "NPC")
         {
             anim.SetBool("running", false);
-            anim.SetTrigger("hi");
+            anim.SetBool("Wave", true);
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            joystick.enabled= false;
+
+            joystick.enabled = false;
             joy.SetActive(false);
-            anim.enabled= false;
+            anim.enabled = false;
         }
-    }   
+        if (Collider.gameObject.CompareTag("Book"))
+        {
+            Debug.Log("Entered");
+            anim.SetBool("running", false);
+            anim.SetBool("idle", true);
+
+            anim.SetBool("idle", true);
+            anim.SetBool("Wave", true);
+
+            StartCoroutine(FinalScene());
+        }
+    }
+
+    IEnumerator FinalScene()
+    {
+        yield return new WaitForSeconds(3f);
+        end.SetActive(true);
+    }
+
     private void OnTriggerExit2D(Collider2D Collider)
     {
         if (Collider.gameObject.tag == "NPC")
         {
             rb.constraints = RigidbodyConstraints2D.None;
             joy.SetActive(true);
+
             anim.enabled = true;
             joystick.enabled = true;
         }
     }
-    
 }
