@@ -17,12 +17,13 @@ public class Holder : MonoBehaviour
             {
                 numName = collision.name;
                 initialGameobj = collision.gameObject;
-                Debug.Log(numName);
+                Debug.Log(numName+"HolderScript");
+                NumberSounds.Instance.ButtonClickSound1();
             }
 
             if (numName != collision.name)
             {
-                swap(initialGameobj);
+                swap(initialGameobj);                
                 numName = collision.name;
             }
         }

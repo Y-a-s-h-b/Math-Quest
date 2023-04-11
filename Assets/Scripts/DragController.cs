@@ -72,6 +72,7 @@ public class DragController : MonoBehaviour
         NumberHold.Play();
         lastDragged.LastPosition = lastDragged.transform.position;
         UpdateDragStatus(true);
+        Debug.Log("Play audio in dragController");
     }
 
     void Drag()

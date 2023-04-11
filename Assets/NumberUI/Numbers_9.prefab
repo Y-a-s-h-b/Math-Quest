@@ -258,3 +258,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drag: 0
+  buttonSound: {fileID: 7589773188456213175, guid: 017e7e6e4e641234dbeebc1d34caec8b, type: 3}

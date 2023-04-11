@@ -9,14 +9,17 @@ public class NewDrag : MonoBehaviour
     private System.Nullable<Vector3> movementDestination;
     private Vector3 initialPosition;
     private char NumberDef;
+    private AudioSource buttonSound;
     private void Start()
     {
         initialPosition = transform.position;
         NumberDef = this.GetComponent<SymbolDefinition>().Number;
+        buttonSound = this.GetComponent<AudioSource>();
     }
     private void OnMouseDown()
     {
         drag = true;
+        ButtonClickAudio();
     }
 
     private void OnMouseUp()
@@ -61,10 +64,10 @@ public class NewDrag : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            returnToOriginalPlace();
-        }       
+        //if (input.getkey(keycode.a))
+        //{
+        //    returntooriginalplace();
+        //}       
 
     }
 
@@ -103,5 +106,9 @@ public class NewDrag : MonoBehaviour
         movementDestination = null;        
     }
    
+    private void ButtonClickAudio()
+    {
+        buttonSound.Play();
+    }
 
 }
