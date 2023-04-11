@@ -8,6 +8,7 @@ TagManager:
   - DARig
   - NPC
   - DropSlotSigns
+  - Book
   layers:
   - Default
   - TransparentFX
