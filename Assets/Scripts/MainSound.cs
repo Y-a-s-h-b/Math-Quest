@@ -5,8 +5,7 @@ using UnityEngine;
 public class MainSound : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]private AudioSource sourceSong;
-    [SerializeField] private AudioSource ButtonClick;
+    [SerializeField]private AudioSource sourceSong;    
     public static MainSound instance;
     private void Awake()
     {
@@ -17,7 +16,7 @@ public class MainSound : MonoBehaviour
         }
         else if (instance!=null)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         
     }
@@ -26,14 +25,12 @@ public class MainSound : MonoBehaviour
     {
         sourceSong.Play();
     }
-
+        
     // Update is called once per frame
     void Update()
     {
         sourceSong.volume = PlayerPrefs.GetFloat("musicVolume");
-    }
-
-    
+    }   
 
     
 }

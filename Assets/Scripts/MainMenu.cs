@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    
+    [SerializeField] private AudioSource ButtonSound1;
     public void PlayGame()
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
@@ -17,5 +17,20 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    
+
+    public void ButtonClickSound()
+    {
+        ButtonSound1.Play();
+    }
+
+    private void Update()
+    {
+        /*if (Input.GetMouseButton(0))
+        {
+            ButtonSound1.Play();
+        }*/
+    }
+
+
+
 }
