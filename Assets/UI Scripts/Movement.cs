@@ -23,7 +23,14 @@ public class Movement : MonoBehaviour
 
     public GameObject end;
 
-    private bool isMoving = true;
+    [HideInInspector]
+    public bool isMoving = true;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+    }
 
     // Start is called before the first frame update
     void Start()
