@@ -23,10 +23,7 @@ public class Movement : MonoBehaviour
 
     public GameObject end;
 
-    //private bool isJumping = false;
-
-
-
+    private bool isMoving = true;
 
     // Start is called before the first frame update
     void Start()
@@ -54,9 +51,10 @@ public class Movement : MonoBehaviour
     void Update()
     {
         movX = joystick.Horizontal * speed;
-        rb.velocity = new Vector2(movX * speed, rb.velocity.y);
-        if (joystick.Horizontal >= 0.5f)
+
+        if (joystick.Horizontal >= 0.5f && isMoving == true)
         {
+            rb.velocity = new Vector2(movX * speed, rb.velocity.y);
             transform.eulerAngles = new Vector3(0, 180, 0);
 
             //anim.SetTrigger("Run");
@@ -64,8 +62,9 @@ public class Movement : MonoBehaviour
             anim.SetBool("walk", false);
             anim.SetBool("running", true);
         }
-        else if (joystick.Horizontal <= -0.5f)
+        else if (joystick.Horizontal <= -0.5f && isMoving == true)
         {
+            rb.velocity = new Vector2(movX * speed, rb.velocity.y);
             transform.eulerAngles = new Vector3(0, 0, 0);
             movX = -speed;
             //anim.SetTrigger("Run");
@@ -73,15 +72,17 @@ public class Movement : MonoBehaviour
             anim.SetBool("walk", false);
             anim.SetBool("running", true);
         }
-        else if (joystick.Horizontal > 0f && joystick.Horizontal < 0.5f)
+        else if (joystick.Horizontal > 0f && joystick.Horizontal < 0.5f && isMoving == true)
         {
+            rb.velocity = new Vector2(movX * speed, rb.velocity.y);
             transform.eulerAngles = new Vector3(0, 180, 0);
             anim.SetBool("idle", false);
             anim.SetBool("running", false);
             anim.SetBool("walk", true);
         }
-        else if (joystick.Horizontal > -0.5f && joystick.Horizontal < 0f)
+        else if (joystick.Horizontal > -0.5f && joystick.Horizontal < 0f && isMoving == true)
         {
+            rb.velocity = new Vector2(movX * speed, rb.velocity.y);
             transform.eulerAngles = new Vector3(0, 0, 0);
             anim.SetBool("idle", false);
             anim.SetBool("running", false);
@@ -127,7 +128,12 @@ public class Movement : MonoBehaviour
         }
         if (Collider.gameObject.CompareTag("Book"))
         {
+            isMoving = false;
+            joystick.enabled = false;
             Debug.Log("Entered");
+            joystick.HandleRange = 0;
+            joystick.DeadZone = 100;
+
             anim.SetBool("running", false);
             anim.SetBool("idle", true);
 

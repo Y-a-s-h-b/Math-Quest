@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 87bfe9aa4a345e64e98a924d402f9b25
+guid: 5040df142cafd9848bee76b869d78f72
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,38 +101,26 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Logo_0
+      name: Blue Particle 1_0
       rect:
         serializedVersion: 2
-        x: 584
-        y: 391
-        width: 780
-        height: 290
+        x: 11
+        y: 13
+        width: 51
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37dd732e486ad234b9a1b80be5ac0850
-      internalID: 121104098
+      spriteID: 25995a2d6938d30449a9cc76fcc89bbe
+      internalID: 146404855
       vertices: []
       indices: 
       edges: []
@@ -148,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Logo_0: 121104098
+      Blue Particle 1_0: 146404855
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
