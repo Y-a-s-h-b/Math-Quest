@@ -863,7 +863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &307253881
 Animator:
   serializedVersion: 5
@@ -2619,7 +2619,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: ' Come On Kid Wake Up!!
 
-    Your Father needs a Book
+    Your Father needs the Book
 
     of Life which
     is hidden inside
