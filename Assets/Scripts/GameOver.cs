@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -18,5 +19,17 @@ public class GameOver : MonoBehaviour
     {
         //test button
         GameOverPanel.SetActive(false);
+    }
+
+    public void ButtonRestart()
+    {
+        SceneManager.LoadScene(1);
+        LevelLoad.intSaver = 0;
+        LevelComplete.i = 0;
+    }
+
+    public void ButtonHome()
+    {
+        SceneManager.LoadScene(0);
     }
 }
