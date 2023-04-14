@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    public static int lives = 3;
+    public int lives = 3;
     public CameraShake camShake;
     public GameOver gameOver;
-
+    
     public void countScore(bool won)
     {
         if (won)
@@ -20,7 +20,7 @@ public class Score : MonoBehaviour
             camShake.start = true;
         }
 
-        if (lives <= 0)
+        if (lives<=0)
         {
             //gameover
             gameOver.gameOver();
@@ -28,3 +28,4 @@ public class Score : MonoBehaviour
         }
     }
 }
+
