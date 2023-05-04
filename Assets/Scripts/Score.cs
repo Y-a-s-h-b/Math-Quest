@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
     public static int lives = 3;
     public CameraShake camShake;
     public GameOver gameOver;
+    public GameObject CheckButton;
 
     public void countScore(bool won)
     {
@@ -25,6 +26,7 @@ public class Score : MonoBehaviour
             //gameover
             gameOver.gameOver();
             Debug.Log("lost");
+            CheckButton.SetActive(false);
         }
     }
 }
